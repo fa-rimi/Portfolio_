@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    overflow: hidden;
+    
+    &, * {
+        cursor: none;
+    }
+
+    .cursor {
+        pointer-events: none;
+        
+        &__ball {
+          position: fixed;
+          top: 0;
+          left: 0;
+          mix-blend-mode: difference;
+          z-index: 1000;
+          
+          circle {
+            fill: #f7f8fa;
+          }
+        }      
+      } 
+    
+    .shapes {
+        position: relative;
+        height: 100vh;
+        background: #ee6c4d;
+    
+    .shape {
+        will-change: transform;
+        position: absolute;
+        border-radius: 50%;
+
+        $shapes: (#eae2b7: 575px, #3d5a80: 450px, #56b77e: 350px, #98c1d9: 240px, #fcbf49: 170px);
+
+        @each $color, $size in $shapes {
+            &.shape-#{index($shapes, ($color $size))} {
+                background: $color;
+                width: $size;
+                height: $size;
+                margin: (-$size/2) 0 0 (-$size/2);
+            
+            }
+        }
+    }
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: 100vh;
+    width: 100vw;
+    mix-blend-mode: screen;
+}
+
+.container_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.greetings {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.greetings .log {
+    font-size: 25px;
+    padding-right: 10px;
+    color: black !important;
+}
+
+.greetings .hello {
+    color: #293241;
+    margin: 0;
+    font-size: 90px;
+}
+
+.enter_button button {
+    font-size: 15px;
+}
+
+
+}
+
+
+
+
+
+    

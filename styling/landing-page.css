@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  overflow: hidden;
+}
+body, body * {
+  cursor: none;
+}
+body .cursor {
+  pointer-events: none;
+}
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+body .cursor__ball circle {
+  fill: #f7f8fa;
+}
+body .shapes {
+  position: relative;
+  height: 100vh;
+  background: #ee6c4d;
+}
+body .shapes .shape {
+  will-change: transform;
+  position: absolute;
+  border-radius: 50%;
+}
+body .shapes .shape.shape-1 {
+  background: #eae2b7;
+  width: 575px;
+  height: 575px;
+  margin: -287.5px 0 0 -287.5px;
+}
+body .shapes .shape.shape-2 {
+  background: #3d5a80;
+  width: 450px;
+  height: 450px;
+  margin: -225px 0 0 -225px;
+}
+body .shapes .shape.shape-3 {
+  background: #56b77e;
+  width: 350px;
+  height: 350px;
+  margin: -175px 0 0 -175px;
+}
+body .shapes .shape.shape-4 {
+  background: #98c1d9;
+  width: 240px;
+  height: 240px;
+  margin: -120px 0 0 -120px;
+}
+body .shapes .shape.shape-5 {
+  background: #fcbf49;
+  width: 170px;
+  height: 170px;
+  margin: -85px 0 0 -85px;
+}
+body .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background: white;
+  height: 100vh;
+  width: 100vw;
+  mix-blend-mode: screen;
+}
+body .container_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .greetings {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+body .greetings .log {
+  font-size: 25px;
+  padding-right: 10px;
+  color: black !important;
+}
+body .greetings .hello {
+  color: #293241;
+  margin: 0;
+  font-size: 90px;
+}
+body .enter_button button {
+  font-size: 15px;
+}/*# sourceMappingURL=landing-page.css.map */
