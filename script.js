@@ -5,19 +5,19 @@ document.body.addEventListener("mousemove", event => {
     gsap.to(".shape", {
         x: mouseX,
         y: mouseY,
-        stagger: -0.11
+        stagger: -0.15
     });
 });
 
 const $bigBall = document.querySelector('.cursor__ball--big');
 const $smallBall = document.querySelector('.cursor__ball--small');
-const $hoverables = document.querySelectorAll('.hoverable');
+const $hoverable = document.querySelectorAll('.hoverable');
 
 // Listeners
 document.body.addEventListener('mousemove', onMouseMove);
-for (let i = 0; i < $hoverables.length; i++) {
-  $hoverables[i].addEventListener('mouseenter', onMouseHover);
-  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+for (let i = 0; i < $hoverable.length; i++) {
+  $hoverable[i].addEventListener('mouseenter', onMouseHover);
+  $hoverable[i].addEventListener('mouseleave', onMouseHoverOut);
 }
 
 // Move the cursor
